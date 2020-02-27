@@ -1,12 +1,5 @@
-# Resumake Template 1
+# Information
 > LaTeX code generated at [resumake.io](https://resumake.io)
 
-## Usage
-To generate a PDF from this LaTeX code, navigate to this folder in a terminal and run:
-
-    pdflatex resume.tex
-
-## Requirements
-You will need to have `pdflatex` installed on your machine.
-
-Alternatively, you can use a site like [ShareLaTeX](https://sharelatex.com) to build and edit your LaTeX instead.
+## Purpose
+I figured I'd put my resume on Github just incase anyone wants to view the source code, and potentially get inspired. I started using resumake.io, then configured it based off what I wanted to put on my resume.
