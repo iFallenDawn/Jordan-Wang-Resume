@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+    \usepackage[margin = .5in]{geometry}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage{enumitem}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{2pt}
+\begin{center}
+	{\Huge \scshape {Jordan Wang}}\\
+	jwang203@stevens.edu $\cdot$ 825 Palisades Avenue Fort Lee, NJ $\cdot$ (973) 652-5128 linkedin.com/in/jordan-wang-689146192/ $\cdot$ github.com/iFallenDawn \\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Stevens Institute of Technology}\hfill Hoboken, NJ\\
+Bachelor of Science in Computer Science \textit{GPA: 3.833} \hfill Aug. 2019 - Expected May 2023\\
+\vspace{2mm}
+
+%==== Skills ====%
+\header{Skills}
+\begin{tabular}{ l l }
+	Java, Python, \LaTeX, Adobe Photoshop, Adobe Premiere                    \\
+\end{tabular}
+\vspace{2mm}
+
+%==== Coursework ====%
+\header{Coursework}
+{\textbf{Fall 2019}} {\sl Aug. 2019 - Dec. 2019} \hfill 
+\\
+Intro to Programming, Intro to Web Programming \& Web Dev, Discrete Structures, Calculus of Two Variables\\
+\vspace*{2mm}
+
+{\textbf{Spring 2020}} {\sl Jan. 2019 - May 2019} \hfill 
+\\
+Data Structures, Linear Algebra, Probability and Statistics\\
+\vspace*{2mm}
+\ 
+
+%==== Projects ====%
+\header{Projects}
+{\textbf{Ultimate Tic Tac Toe}} \hfill 
+\\
+Using Java, developed a variation of the classic game of Tic Tac Toe. Featured working Artificial Intelligence, hints, move list and a graph of ratings based off how well the game thinks the player is doing.\\
+\vspace*{2mm}
+{\textbf{FBLA Jeopardy}} \hfill 
+\\
+Using Java, designed a Jeopardy inspired game made to test the knowledge of FBLA members. Featured sound, five random categories chosen from a preset list of ten categories, and a team versus team experience.\\
+\vspace*{2mm}
+\ 
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Filipino Association of Stevens Tech} \hfill Stevens Institute of Technology\\
+\textit{Member} \hfill Aug. 2019 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Volunteered and attended various events such as ESC Around the World and Filipino Intercollegiate Networking Dialogue Fall Dialogue.
+	\item Helped with Public Relations involving events such as Mr. Philippines through photography and video editing using Adobe Photoshop and Adobe Premiere.
+\end{itemize}
+
+\textbf{Ultimate Frisbee Club Team} \hfill Stevens Institute of Technology\\
+\textit{Member} \hfill Aug. 2019 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Photographed and managed photo albums on DuckLink, a Stevens Institute of Technology managed website centered around finding organizations, attending events, and tracking involvement on campus.
+\end{itemize}
+
+\textbf{Mu Alpha Theta} \hfill Wayne Hills High School\\
+\textit{Officer} \hfill Sep. 2018 - June 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Organized and participated in math competitions such as the MathWorks Math Modeling Challenge 2019.
+	\item Utilized Gallup polls surveys to conduct research and Microsoft Excel to graph and interpret data.
+\end{itemize}
+
+\textbf{Future Business Leaders of America} \hfill Wayne Hills High School\\
+\textit{Member} \hfill Sep. 2018 - June 2019\\
+\vspace{-1mm}
+\begin{itemize}  \itemsep 1pt
+	\item Competed in Six Flags Business and Marketing Day 2019 Challenge, winning Honorable Mention for successfully designing a career advertisement using Adobe Photoshop.
+	\item Competed in FBLA State Leadership Conference 2019 for Computer Game and Simulation Programming.
+\end{itemize}
+
+%==== Extracurriculars ====%
+\header{Extracurriculars}
+Chinese Student Association, Society of Asian Scientists and Engineers, Korean Student Association
+\end{document}
