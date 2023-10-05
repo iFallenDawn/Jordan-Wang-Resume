@@ -7,6 +7,7 @@
     \usepackage{hyperref}
     \usepackage[utf8]{inputenc}
     \usepackage[T1]{fontenc}
+    \usepackage{lmodern} % Font Family
     \textheight=10in
     \pagestyle{empty}
     \raggedright
@@ -14,6 +15,7 @@
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\rmdefault}{lmss}
 
 \newcommand{\area} [2] {
     \vspace*{-9pt}
@@ -27,8 +29,8 @@
     \hspace*{-18pt} \hrulefill \\
 }
 
-\newcommand{\header} [1] {
-    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+\newcommand{\header}[1]{
+    {\hspace*{-18pt}\vspace*{6pt} #1}
     \vspace*{-6pt} \lineunder
 }
 
@@ -45,22 +47,6 @@
     \vspace*{-8pt}
 }
 
-\newenvironment{achievements}{
-    \begin{list}
-        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
-    \end{list}
-}
-
-\newcommand{\schoolwithcourses} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-    \vspace*{5pt}
-}
-
-\newcommand{\school} [4] {
-    \textbf{#1} #2 $\bullet$ #3\\
-    #4 \\
-}
 % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -71,24 +57,32 @@
 %==== Profile ====%
 \vspace*{2pt}
 \begin{center}
-	{\Huge \scshape {Jordan Wang}}\\
+	{\Huge {Jordan Wang}}\\
 	\vspace{2mm}
 	jordanwng58@gmail.com $\cdot$ Edgewater, NJ $\cdot$ (973) 652-5128 $\cdot$ \href{https://www.linkedin.com/in/jordan-wang/}{linkedin.com/in/jordan-wang} $\cdot$ \href{https://github.com/iFallenDawn}{github.com/iFallenDawn} \\
 \end{center}
+\vspace{-2mm}
 %==== Education ====%
 \header{Education}
 \textbf{Stevens Institute of Technology}\hfill Hoboken, NJ\\
-Bachelor of Science in Computer Science (\textit{GPA: 3.938}) \hfill August 2019 - Expected May 2023\\
+Bachelor of Science in Computer Science (\textit{GPA: 3.94/4.00}) \hfill \textit{August 2019 - May 2023}\\
 \vspace{2mm}
 
 %==== Skills ====%
 \header{Skills}
-	Java, Python, Selenium WebDriver, Git, HTML, CSS, JavaScript, MongoDB, Node, Express, React, Handlebars, C++, \LaTeX, OCaml, Eclipse, Visual Studio Code, AWS, Microsoft Azure, HashiCorp Certified: Terraform Associate
+{\textbf{Languages and Frameworks}} \hfill 
+\\
+	Java, Python, JavaScript, C++, Go, Git, HashiCorp Certified: Terraform Associate, Selenium WebDriver, MongoDB, Firebase, Node.js, Express, React, Redux, \LaTeX, SQL
+ \\
+\vspace{1mm}
+ {\textbf{Operating Systems and Software}} \hfill 
+ \\
+ Windows, Linux, MacOS, Visual Studio Code, Git, Microsoft Azure, Google Cloud Platform, Amazon Web Services, Docker
 \vspace{2mm}
 
 %==== Coursework ====%
 \header{Coursework}
-{\textbf{Relevant Courses}} {\sl August 2019 - December 2022} \hfill 
+{\textbf{Relevant Courses}} {\sl August 2019 - May 2023} \hfill 
 \\
 Data Structures, Algorithms, Discrete Structures, Linear Algebra, Probability and Statistics, Automata and Computation, Project Management, Programming Languages, Systems Programming, Database Management Systems, Concurrent Programming, Human Computer Interaction, Web Programming I, Agile Methods for Software Dev, Operating Systems, Web Programming II\\
 \vspace{2mm}
@@ -96,56 +90,56 @@ Data Structures, Algorithms, Discrete Structures, Linear Algebra, Probability an
 %==== Work Experience ====%
 \header{Work Experience}
 \textbf{Kyndryl} \hfill New York, NY\\
-\textit{DevOps Intern} \hfill May - August 2022\\
-\vspace{-1mm}
+\textit{Automation Developer} \hfill \textit{June 2023 - Present}\\
+\vspace{-2mm}
 \begin{itemize}[noitemsep,parsep=0pt,partopsep=0pt]\itemsep 1pt
-    \item Using Terraform, GitHub Actions, and Python, utilized Infrastructure as Code to deploy and parameterize resources across various hyperscalars such as AWS, Microsoft Azure, and Google Cloud Platform
-    \item Using Python and Selenium WebDriver, reduced time taken to create Terraform templates by 95\% through web scraping official Terraform documentation and digesting information into a JSON file with an 80-90\% accuracy, automating Day 0 processes
+    \item Worked in React frontends supported by Python backends and Terraform Infrastructure as Code generation
+    \item Developed web application to deploy and parameterize resources across various hyperscalars such as AWS, Microsoft Azure, and Google Cloud Platform
+    \item Led project in automated generation of customized Terraform templates with 100\% accuracy using Python
+    \item Remediated outdated Terraform templates generated previously, modernizing and reworking pipelines
+\end{itemize}
+\vspace{-1mm}
+\textbf{Kyndryl} \hfill New York, NY\\
+\textit{DevOps Intern} \hfill \textit{May 2022 - August 2022}\\
+\vspace{-2mm}
+\begin{itemize}[noitemsep,parsep=0pt,partopsep=0pt]\itemsep 1pt
+    \item Developed automations using Terraform, GitHub Actions, Python, and Selenium WebDriver, reducing time taken to create Terraform templates by 95\%
+    \item Automated Day 0 design processes through web scraping and digesting information into templates with a 90\% accuracy
 \end{itemize}
 
-\textbf{Con Edison} \hfill New York, NY\\
-\textit{Technology Intern} \hfill April - August 2021\\
-\vspace{-1mm}
-\begin{itemize}[noitemsep,parsep=0pt,partopsep=0pt]\itemsep 1pt
-    \item Using a Python script, saved Electric Operations thousands of dollars through data cleanup, eliminating hundreds of discrepancies
-    \item Streamlined the Tableau operational dashboards using Python web scraping to pull and migrate data to a JSON file
-\end{itemize}
 \vspace{2mm}
 %==== Personal Projects ====%
 \header{Personal Projects}
-{\textbf{Automatic Exclusion Checklist (2022)}}
+{\textbf{Automatic Exclusion Checklist}} \hfill \textit{January 2020 - Present}
 \begin{itemize}[noitemsep,topsep=0.5pt, parsep=0pt,partopsep=0pt]
-    \item Using Java and Selenium WebDriver, developed an application for healthcare companies to automate the process of creating monthly exclusion checks for every employee to ensure the safety of patients from dangerous offenders
-    \item Automated an otherwise manual generation process and reduced time taken by 90\% on \textit{secureepls.com} and created a constant feedback loop with the client, ensuring their satisfaction at every step of the process
+    \item Founded application for healthcare companies to automate the process of creating monthly exclusion checks for every employee to ensure the safety of patients from dangerous offenders
+    \item Reduced time taken by 90\% using Java and Selenium WebDriver
+    \item Maintained constant feedback loop through monthly check-ins with the client and ensuring their satisfaction
 \end{itemize}
-\vspace{2mm}
-%==== Projects ====%
-\header{Academic Projects}
-\textbf{Pooler, \textit{Web Programming I}}
+
+\textbf{Ogie Bank, \textit{Web Programming II Final Project}} \hfill \textit{September 2022 - December 2022}
 \begin{itemize}[noitemsep, topsep=0.5pt, parsep=0pt,partopsep=0pt]
-    \item Using MongoDB, Express, Handlebars, and Node, developed a web application to help organize carpooling amongst organizations and groups of people to provide more useful information during trips
-    \item Built frontend and backend for user profile allowing for the user to view and edit their profile information
+    \item Developed in team of 5 a budget organization platform allowing users to easily keep track of their financial planning
+    \item Implemented Firebase Firestore, Firebase Authentication, Express, React components, and Redux logic connecting frontend with backend
+    \item Deployed through Heroku and containerized using Docker for a CI/CD pipeline
+\end{itemize}
+
+\textbf{Frog Nanny, \textit{Agile Methods for Software Dev. Final Project}}  \hfill \textit{January 2022 - May 2022}
+\begin{itemize}[noitemsep, topsep=0.5pt, parsep=0pt,partopsep=0pt]
+    \item Developed in team of 5 a water-drinking progression web application to encourage users to remain hydrated and raise awareness about frogs
+    \item Implemented and deployed  full stack web application using MongoDB, Express, React components and designs, and Node.js
+    \item Applied agile frameworks consisting of sprints, sprint planning, daily standups, user stories, product backlogs, and sprint reviews
+\end{itemize}
+
+\textbf{Pooler, \textit{Web Programming I Final Project}} \hfill \textit{January 2022 - May 2022}
+\begin{itemize}[noitemsep, topsep=0.5pt, parsep=0pt,partopsep=0pt]
+    \item Developed in team of 5 a full-stack web application to help organize carpooling amongst organizations and groups of people to provide more useful information during trips
+    \item Connected frontend and backend for user profile allowing for  users to view and edit their profile information using MongoDB, Express, Handlebars, and Node.js
     \item Utilized a Kanban board to organize user stories and product backlog
 \end{itemize}
 
-\textbf{Frog Nanny, \textit{Agile Methods for Software Dev.}} 
-\begin{itemize}[noitemsep, topsep=0.5pt, parsep=0pt,partopsep=0pt]
-    \item Using MongoDB, Express, React, Chakra UI, and Node, developed a water-drinking progression web application to encourage users to remain hydrated and raise awareness about frogs
-    \item Applied Scrum, an Agile method consisting of sprints and sprint planning, standups, user stories, product backlogs, and sprint reviews
-\end{itemize}
 \vspace{2mm}
-%==== Activities ====%
-\header{Activities}
-\textbf{Ethnic Student Council (ESC)} \hfill Stevens Institute of Technology\\
-\textit{President} \hfill April 2021 - Present\\
-\vspace{-1mm}
-\begin{itemize}[noitemsep,parsep=0pt,partopsep=0pt]
-    \item Oversaw and delegated tasks for large scale cultural events involving 11 organizations to celebrate cultural diversity among student body
-    \item Managed a budget of over \$30,000 and an executive board to plan Unity, a series of events celebrating culture with 1000+ attendees 
-\end{itemize}
-\vspace{2mm}
-%==== Extracurriculars ====%
-\header{Extracurriculars}
-Upsilon Phi Epsilon Vice President, Chinese Student Association, Society of Asian Scientists and Engineers
-%=== Extras ====%
+\begin{center}
+    U.S Citizen
+\end{center}
 \end{document}
